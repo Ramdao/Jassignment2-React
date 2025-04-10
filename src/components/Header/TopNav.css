@@ -1,0 +1,59 @@
+/* Navbar Styles */
+.navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #ff4e00, #ff6a00, #ff8c00);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 2.5rem;
+  right: 0;
+  z-index: 100;
+}
+/* Game Store Text Style */
+.game-store {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Navbar Link Styles */
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+  background: linear-gradient(135deg, #00bfff, #0077ff); /* Gradient background on hover */
+  color: #fff;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3); /
+}
+
+/* Active Link Styles */
+.nav-link.active {
+  background-color: #00bfff; 
+  color: #fff;
+}
+
+/* Adding some spacing between content and navbar for better visibility */
+body {
+  padding-top: 70px; 
+  background: #121212;
+  color: #e0e0e0;
+}

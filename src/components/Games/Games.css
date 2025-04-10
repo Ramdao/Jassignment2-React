@@ -1,0 +1,95 @@
+a {
+    text-decoration: none;
+  }
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 3vw;
+    margin-top: 2rem;
+  }
+  
+  .game-card {
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #00fff7, #ff00e0);
+    border-image-slice: 1;
+  }
+  
+  .game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .game-card-content {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .game-card-content strong {
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+  
+  .list-style {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .list-style li {
+    margin-bottom: 0.6rem;
+    color: #bbbbbb;
+    line-height: 1.4;
+  }
+  
+  /* Genre badge */
+  .genre-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(to right, #00fff7, #ff00e0);
+    color: #000;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Page title */
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
