@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 export default function Players() {
   const { players, loading, error } = usePlayerData();
 
-  if (loading) return <p>Loading player info...</p>;
-  if (error) return <p>Error: {error}</p>;
-  if (!players || players.length === 0) return <p>No players found.</p>;
+  if (loading) return <p className='Loadinginfo'>Loading player info...</p>;
+  if (error) return <p className='Loadinginfo'>Error: {error}</p>;
+  if (!players || players.length === 0) return <p className='Loadinginfo'>No players found.</p>;
 
   return (
     <>

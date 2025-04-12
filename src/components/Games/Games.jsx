@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 export default function Games() {
   const { games, loading, error } = useGamesData();
 
-  if (loading) return <p>Loading games...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className='Loadinginfo'>Loading games...</p>;
+  if (error) return <p className='Loadinginfo'>Error: {error}</p>;
 
   return (
     <div className="games-container">

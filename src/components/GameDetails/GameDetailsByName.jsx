@@ -9,8 +9,8 @@ export default function GameDetailByName() {
   const { title } = useParams();
   const { games, loading, error } = useGamesData();
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className='Loadinginfo'>Loading...</p>;
+  if (error) return <p className='Loadinginfo'>Error: {error}</p>;
 
   const game = games.find(g => g.title.toLowerCase() === decodeURIComponent(title).toLowerCase());
 

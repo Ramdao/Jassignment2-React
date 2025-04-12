@@ -7,8 +7,8 @@ export default function GameDetail() {
   const { id } = useParams(); 
   const { games, loading, error } = useGamesData(); 
 
-  if (loading) return <p>Loading game details...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className='Loadinginfo'>Loading game details...</p>;
+  if (error) return <p className='Loadinginfo'>Error: {error}</p>;
 
   console.log('Game ID from URL:', id); 
   console.log('Games array:', games);
