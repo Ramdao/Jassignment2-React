@@ -1,31 +1,45 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { useState } from 'react'; 
+import './App.css'; // Main stylesheet
 
-import './App.css';
-
-import TopNav from './components/Header/TopNav';
-import Players from './components/Players/Players';
-import Games from './components/Games/Games';
-import GameDetail from './components/GameDetails/GameDetails';
-import GameDetailByName from './components/GameDetails/GameDetailsByName';
-import Footer from './components/Footer/Footer';
+// Importing components used in the application
+import TopNav from './components/Header/TopNav'; // Top navigation bar
+import Players from './components/Players/Players'; // Players list view
+import Games from './components/Games/Games'; // Games list view
+import GameDetail from './components/GameDetails/GameDetails'; // Game detail by ID
+import GameDetailByName from './components/GameDetails/GameDetailsByName'; // Game detail by title
+import Footer from './components/Footer/Footer'; // Footer component
 
 function App() {
-  const [count, setCount] = useState(0);
+  
 
   return (
     <>
-    <Router>
-      <TopNav />
-      <Routes>
-        <Route path="/players" element={<Players />} />
-        <Route path="/games" element={<Games />} />
-        <Route path="/game/:id" element={<GameDetail />} /> 
-        <Route path="/game/title/:title" element={<GameDetailByName />} />
-        <Route path="/" element={<Games />} />
-      </Routes>
-    </Router>
-    <Footer />
+      <Router>
+        {/* Navigation bar shown on all pages */}
+        <TopNav />
+
+        {/* Main routing section */}
+        <Routes>
+          {/* Route for players page */}
+          <Route path="/players" element={<Players />} />
+
+          {/* Route for games listing */}
+          <Route path="/games" element={<Games />} />
+
+          {/* Route to show game detail by ID */}
+          <Route path="/game/:id" element={<GameDetail />} />
+
+          {/* Route to show game detail by title */}
+          <Route path="/game/title/:title" element={<GameDetailByName />} />
+
+          {/* Default route (home) shows games */}
+          <Route path="/" element={<Games />} />
+        </Routes>
+      </Router>
+
+      {/* Footer displayed on all pages */}
+      <Footer />
     </>
   );
 }

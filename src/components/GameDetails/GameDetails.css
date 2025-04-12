@@ -1,3 +1,4 @@
+/* Container for the game detail view */
 .game-detail {
     padding: 2rem;
     color: #e0e0e0;
@@ -6,44 +7,50 @@
     align-items: center;
     background: linear-gradient(135deg, #1f1f1f, #2a2a2a); 
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); 
 }
 
+/* Game image styling */
 .game-detail-image {
     display: grid;
     margin-top: 7rem;
     width: 70%;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3); 
     margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
+/* Image hover effect for interactivity */
 .game-detail-image:hover {
     transform: scale(1.05); 
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4); 
 }
 
+/* Content box styling */
 .game-detail-content {
     width: 65%;
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 30, 0.8); /* semi-transparent dark background */
+    backdrop-filter: blur(10px); 
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
     transition: transform 0.3s ease;
 }
 
+/* Slight zoom on content hover */
 .game-detail-content:hover {
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
 
+/* Heading styling inside content */
 .game-detail-content h1 {
     font-size: 2.5rem;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); 
 }
 
+/* Paragraph styling inside content */
 .game-detail-content p {
     margin: 1rem 0;
     font-size: 1.1rem;
@@ -51,10 +58,12 @@
     color: #ccc; 
 }
 
+/* Highlight important words in paragraphs */
 .game-detail-content p strong {
     color: #00ffcc; 
 }
 
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .game-detail {
         padding: 1.5rem;
@@ -67,11 +76,12 @@
     }
 }
 
+/* Loader text while data is being fetched */
 .Loadinginfo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; 
     font-size: 2rem;
-    color: #00fff7;
-  }
+    color: #00fff7; 
+}
